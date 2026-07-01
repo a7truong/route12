@@ -1,0 +1,86 @@
+[
+  {
+    "name": "CardFesta Pop-up",
+    "date": "2026-01-24",
+    "showTime": "10am - 4pm",
+    "venueName": "Embassy Grand Convention Centre",
+    "addressLine1": "8800 The Gore Road",
+    "addressLine2": "Brampton, ON L6P 0B1"
+  },
+  {
+    "name": "NACE",
+    "date": "2026-02-28",
+    "showTime": "11am - 6pm",
+    "venueName": "IKON Event Space",
+    "addressLine1": "6887 Dixie Road",
+    "addressLine2": "Mississauga, ON L5S 0B8"
+  },
+  {
+    "name": "Mewtopia",
+    "date": "2026-03-14",
+    "showTime": "10am - 4pm",
+    "venueName": "Queen's Manor Event Centre",
+    "addressLine1": "2 Auction Lane",
+    "addressLine2": "Brampton, ON L6T 0C4",
+    "additionalDetail": "10 - 11am Early Bird"
+  },
+  {
+    "name": "NACE",
+    "date": "2026-03-22",
+    "showTime": "11am - 6pm",
+    "venueName": "IKON Event Space",
+    "addressLine1": "6887 Dixie Road",
+    "addressLine2": "Mississauga, ON L5S 0B8"
+  },
+  {
+    "name": "Mewtopia",
+    "date": "2026-04-26",
+    "showTime": "10am - 4pm",
+    "venueName": "Embassy Grand Convention Centre",
+    "addressLine1": "8800 The Gore Road",
+    "addressLine2": "Brampton, ON L6P 0B1",
+    "additionalDetail": "10 - 11am Early Bird"
+  },
+  {
+    "name": "HobbyVerse",
+    "date": "2026-05-30",
+    "showTime": "10am - 5pm",
+    "venueName": "Weplay Centre",
+    "addressLine1": "100 Clegg Road",
+    "addressLine2": "Markham, ON L6G 1E1"
+  },
+  {
+    "name": "Mewtopia",
+    "date": "2026-06-07",
+    "showTime": "10am - 6pm",
+    "venueName": "Paramount Eventspace",
+    "addressLine1": "222 Rowntree Dairy Rd",
+    "addressLine2": "Woodbridge, ON L4L 9T2",
+    "additionalDetail": "10 - 11am Early Bird"
+  },
+  {
+    "name": "NACE",
+    "date": "2026-06-13",
+    "showTime": "11am - 6pm",
+    "venueName": "Brampton Soccer Centre",
+    "addressLine1": "1495 Sandalwood Pkwy E",
+    "addressLine2": "Brampton, ON L6R 0K2"
+  },
+  {
+    "name": "Card Yard",
+    "date": "2026-07-11",
+    "showTime": "9:30am - 9pm",
+    "venueName": "Erin Mills Town Centre",
+    "addressLine1": "5100 Erin Mills Pkwy",
+    "addressLine2": "Mississauga, ON L5M 4Z5"
+  },
+  {
+    "name": "Mewtopia",
+    "date": "2026-07-25",
+    "showTime": "10am - 6pm",
+    "venueName": "Paramount Eventspace",
+    "addressLine1": "222 Rowntree Dairy Rd",
+    "addressLine2": "Woodbridge, ON L4L 9T2",
+    "additionalDetail": "10 - 11am Early Bird"
+  }
+]
