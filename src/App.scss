@@ -11,3 +11,67 @@
     gap: 18px;
   }
 }
+
+$header-height: 56px;
+
+.section.full-view-minus-header {
+  height: calc(80vh - $header-height);
+}
+
+.section.standard-view {
+  min-height: 30vh;
+  margin-bottom: 10rem;
+}
+
+.header {
+  height: $header-height;
+  background-color: var(--mantine-color-body);
+
+  .inner-container {
+    height: $header-height;
+    display: flex;
+    justify-content: right;
+
+    .group {
+      width: 100%;
+
+      .link {
+        display: block;
+        line-height: 1;
+        padding: 8px 12px;
+        border-radius: var(--mantine-radius-sm);
+        text-decoration: none;
+        color: var(--mantine-color-gray-8);
+        font-size: var(--mantine-font-size-sm);
+        font-weight: 500;
+      }
+
+      .link:hover {
+        color: var(--mantine-color-gray-0);
+        background-color: var(--accent);
+      }
+    }
+  }
+}
+
+.pokemon-image {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  color: var(--accent) !important;
+}
+
+button:hover {
+  color: var(--mantine-color-gray-0) !important;
+  background-color: var(--accent) !important;
+}
+
+.badge {
+  background-color: var(--accent) !important;
+
+  * {
+    color: var(--mantine-color-gray-0) !important;
+  }
+}

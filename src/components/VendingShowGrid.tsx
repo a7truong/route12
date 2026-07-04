@@ -1,5 +1,5 @@
-import { Badge, Card, Group, SimpleGrid, Text } from "@mantine/core";
-import { ClockIcon, MapPinSimpleIcon } from "@phosphor-icons/react";
+import { Button, Badge, Card, Group, SimpleGrid, Text } from "@mantine/core";
+import { ClockIcon } from "@phosphor-icons/react";
 import dayjs from "dayjs";
 import type { VendingSchedule } from "../models/vendingSchedule.ts";
 import "./VendingShowGrid.scss";
@@ -9,6 +9,11 @@ interface VendingShowGridProps {
 }
 
 export default function VendingShowGrid({ shows }: VendingShowGridProps) {
+  const getGoogleMapLink = (show: VendingSchedule) => {
+    const googleMapPrefix = "https://www.google.com/maps/search";
+    return encodeURI(`${googleMapPrefix}/${show.venueName} ${show.addressLine1} ${show.addressLine2}`);
+  };
+
   const today = dayjs();
   return (
     <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" mt={50}>
@@ -24,10 +29,10 @@ export default function VendingShowGrid({ shows }: VendingShowGridProps) {
         }
 
         return (
-          <Card withBorder padding="xl" radius="md" key={v.date} className="vending-schedule-card">
+          <Card radius="md" key={v.date} className="vending-schedule-card">
             <Group justify={dayDiff >= 0 ? "space-between" : "center"}>
-              <Badge>{showDate.format("MMM D YYYY")}</Badge>
-              {dayDiff >= 0 && <Badge>{dayDiffLabel}</Badge>}
+              <Badge className="badge">{showDate.format("MMM D YYYY")}</Badge>
+              {dayDiff >= 0 && <Badge className="badge">{dayDiffLabel}</Badge>}
             </Group>
             <Text fz="xl" fw={600} mt="md">
               {v.name}
@@ -36,9 +41,10 @@ export default function VendingShowGrid({ shows }: VendingShowGridProps) {
               <ClockIcon className="icon" />
               {v.showTime}
             </Text>
-            <Text fz="md" mt={20} className="text-with-icon">
-              <MapPinSimpleIcon className="icon" />
-              {v.venueName}
+            <Text fz="md" mt={20}>
+              <Button variant="subtle" onClick={() => window.open(getGoogleMapLink(v), "_blank")}>
+                {v.venueName}
+              </Button>
             </Text>
             <Text fz="sm" c="dimmed" mt={10}>
               {v.addressLine1}

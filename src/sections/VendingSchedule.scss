@@ -3,24 +3,15 @@
 
   .tab-list {
     position: relative;
-    margin-bottom: var(--mantine-spacing-md);
-  }
-
-  .tab-indicator {
-    background-color: var(--mantine-color-white);
-    border-radius: var(--mantine-radius-md);
-    border: 1px solid var(--mantine-color-gray-2);
-    box-shadow: var(--mantine-shadow-sm);
   }
 
   .tab-name {
     z-index: 1;
     font-weight: 600;
     transition: color 100ms ease;
-    color: var(--mantine-color-gray-7);
+  }
 
-    &[data-active] {
-      color: var(--mantine-color-black);
-    }
+  .no-upcoming-show-image {
+    max-width: 100%;
   }
 }
