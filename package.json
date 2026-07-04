@@ -2,7 +2,7 @@
   "name": "route12",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://a7truong.github.io/route12",
+  "homepage": "https://www.route12.ca",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
