@@ -23,6 +23,12 @@ $header-height: 56px;
   margin-bottom: 10rem;
 }
 
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 10000;
+}
+
 .header {
   height: $header-height;
   background-color: var(--mantine-color-body);
@@ -31,6 +37,7 @@ $header-height: 56px;
     height: $header-height;
     display: flex;
     justify-content: right;
+    margin-top: 0.5rem;
 
     .group {
       width: 100%;
@@ -43,13 +50,26 @@ $header-height: 56px;
         text-decoration: none;
         color: var(--mantine-color-gray-8);
         font-size: var(--mantine-font-size-sm);
-        font-weight: 500;
+        font-weight: 600;
       }
 
       .link:hover {
         color: var(--mantine-color-gray-0);
         background-color: var(--accent);
       }
+    }
+
+    &.static {
+      min-width: 100%;
+      padding-inline: unset;
+    }
+
+    .static-header {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      border: 0.1rem;
+      border-radius: var(--mantine-radius-xl);
+      background-color: color-mix(in srgb, var(--accent) 25%, transparent);
     }
   }
 }
@@ -73,5 +93,14 @@ button:hover {
 
   * {
     color: var(--mantine-color-gray-0) !important;
+  }
+}
+
+.footer {
+  margin-top: 10rem;
+
+  .content {
+    padding-bottom: var(--mantine-spacing-sm);
+    font-size: var(--mantine-font-size-xs);
   }
 }

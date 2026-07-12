@@ -1,0 +1,45 @@
+.contact-container {
+  width: 100%;
+
+  .left {
+    display: flex;
+    align-items: start;
+  }
+
+  .form-input {
+    margin-top: 1rem;
+    label {
+      text-align: start;
+      width: 100%;
+    }
+  }
+
+  .submit-button {
+    margin-top: 1rem;
+    background-color: var(--accent);
+    color: var(--mantine-color-white) !important;
+  }
+
+  .submit-button:hover {
+    background-color: color-mix(in srgb, var(--accent) 80%, white) !important;
+  }
+
+  .submission-alert {
+    &.failed {
+      background-color: #d98c8c;
+    }
+
+    &.sucessful {
+      background-color: #8cbf9f;
+    }
+
+    img {
+      margin-top: 1rem;
+      max-width: 100%;
+    }
+
+    span {
+      color: var(--mantine-color-gray-8);
+    }
+  }
+}

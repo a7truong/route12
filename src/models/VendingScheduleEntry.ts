@@ -1,4 +1,4 @@
-export interface VendingSchedule {
+export interface VendingScheduleEntry {
   name: string;
   date: string;
   showTime: string;

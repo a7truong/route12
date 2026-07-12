@@ -1,15 +1,15 @@
 import { Button, Badge, Card, Group, SimpleGrid, Text } from "@mantine/core";
 import { ClockIcon } from "@phosphor-icons/react";
 import dayjs from "dayjs";
-import type { VendingSchedule } from "../models/vendingSchedule.ts";
+import type { VendingScheduleEntry } from "../models/VendingScheduleEntry.ts";
 import "./VendingShowGrid.scss";
 
 interface VendingShowGridProps {
-  shows: VendingSchedule[];
+  shows: VendingScheduleEntry[];
 }
 
 export default function VendingShowGrid({ shows }: VendingShowGridProps) {
-  const getGoogleMapLink = (show: VendingSchedule) => {
+  const getGoogleMapLink = (show: VendingScheduleEntry) => {
     const googleMapPrefix = "https://www.google.com/maps/search";
     return encodeURI(`${googleMapPrefix}/${show.venueName} ${show.addressLine1} ${show.addressLine2}`);
   };

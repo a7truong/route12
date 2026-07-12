@@ -1,26 +1,14 @@
 import snorlax from "../assets/snorlax.gif";
 import snorlaxSleeping from "../assets/snorlax_sleeping.gif";
-import vendingSchedule from "../assets/vendingSchedule.json";
-import dayjs from "dayjs";
 import { Container, Grid, Group, Tabs, Title } from "@mantine/core";
 import VendingScheduleGrid from "../components/VendingShowGrid";
-import type { VendingSchedule } from "../models/vendingSchedule.ts";
+import VendingScheduleService from "../models/VendingScheduleService.ts";
 import "./VendingSchedule.scss";
 
 export default function VendingSchedule() {
-  const today = dayjs();
-  const pastShows = vendingSchedule
-    .filter((v) => {
-      const showDate = dayjs(v.date);
-      return !(today.isSame(showDate, "day") || showDate.diff(dayjs(), "day") + 1 > 0);
-    })
-    .sort((v1, v2) => v2.date.localeCompare(v1.date)) as VendingSchedule[]; // descending order sort
-  const futureShows = vendingSchedule
-    .filter((v) => {
-      const showDate = dayjs(v.date);
-      return today.isSame(showDate, "day") || showDate.diff(dayjs(), "day") + 1 > 0;
-    })
-    .sort((v1, v2) => v1.date.localeCompare(v2.date)) as VendingSchedule[]; // ascending order sort
+  const vendingScheduleService = new VendingScheduleService();
+  const pastShows = vendingScheduleService.getPastShows();
+  const futureShows = vendingScheduleService.getUpcomingShows();
 
   return (
     <Container size="lg" py="xl" className="vending-schedule">
