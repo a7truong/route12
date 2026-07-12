@@ -19,7 +19,17 @@ export default function VendingShowGrid({ shows }: VendingShowGridProps) {
     <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" mt={50}>
       {shows.map((v) => {
         const showDate = dayjs(v.date);
-        const dayDiff = today.isSame(showDate, "day") ? 0 : showDate.diff(dayjs(), "day") + 1;
+        const isToday = today.isSame(showDate, "day");
+        let dayDiff;
+        if (isToday) {
+          dayDiff = 0;
+        } else {
+          dayDiff = showDate.diff(dayjs(), "day");
+          if (dayDiff >= 0) {
+            dayDiff++; // if the show is in the future, add 1 day (if past show .diff call results in neg #, do not add 1)
+          }
+        }
+
         let dayDiffLabel = `${dayDiff} days left`;
         if (dayDiff === 0) {
           dayDiffLabel = "Today";
