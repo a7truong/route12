@@ -1,5 +1,13 @@
 [
   {
+    "name": "Card Yard",
+    "date": "2026-09-12",
+    "showTime": "9:30am - 9pm",
+    "venueName": "Erin Mills Town Centre",
+    "addressLine1": "5100 Erin Mills Pkwy",
+    "addressLine2": "Mississauga, ON L5M 4Z5"
+  },
+  {
     "name": "Mewtopia",
     "date": "2026-07-25",
     "showTime": "10am - 6pm",
