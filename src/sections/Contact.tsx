@@ -2,7 +2,7 @@ import oshawottPikachuDance from "../assets/oshawott_pikachu_dance.gif";
 import snorlaxSleeping from "../assets/snorlax_sleeping.gif";
 import { useState } from "react";
 import dayjs from "dayjs";
-import { Alert, Button, Container, Grid, Title, Textarea, TextInput } from "@mantine/core";
+import { Alert, Box, Button, Container, Grid, Title, Textarea, TextInput } from "@mantine/core";
 import "./Contact.scss";
 import ContactMethodService from "../models/ContactMethodService";
 
@@ -124,14 +124,32 @@ export default function Contact() {
         <Grid.Col span={{ base: 12, md: 6, lg: 6 }}>
           {contactMethods.map((m) => (
             <div className="left" key={m.method}>
-              <Button
-                size="xl"
-                leftSection={<m.icon size={32} />}
-                variant="subtle"
-                onClick={() => window.open(m.url, "_blank")}
-              >
-                {m.display}
-              </Button>
+              {
+                // Large screen
+                <Box visibleFrom="md">
+                  <Button
+                    size="xl"
+                    leftSection={<m.icon size={32} />}
+                    variant="subtle"
+                    onClick={() => window.open(m.url, "_blank")}
+                  >
+                    {m.display}
+                  </Button>
+                </Box>
+              }
+              {
+                // Small screen
+                <Box hiddenFrom="md">
+                  <Button
+                    size="md"
+                    leftSection={<m.icon size={24} />}
+                    variant="subtle"
+                    onClick={() => window.open(m.url, "_blank")}
+                  >
+                    {m.display}
+                  </Button>
+                </Box>
+              }
             </div>
           ))}
         </Grid.Col>
