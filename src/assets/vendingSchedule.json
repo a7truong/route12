@@ -8,13 +8,23 @@
     "addressLine2": "Mississauga, ON L5M 4Z5"
   },
   {
+    "name": "Collectors Clash",
+    "date": "2026-08-02",
+    "showTime": "10:30am - 7pm",
+    "venueName": "La Primavera Event Space",
+    "addressLine1": "77 Woodstream Blvd",
+    "addressLine2": "Woodbridge, ON L4L 7Y6",
+    "link": "https://www.instagram.com/p/DbB7wTpzevG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
     "name": "Mewtopia",
     "date": "2026-07-25",
     "showTime": "10am - 6pm",
     "venueName": "Paramount EventSpace",
     "addressLine1": "222 Rowntree Dairy Rd",
     "addressLine2": "Woodbridge, ON L4L 9T2",
-    "additionalDetail": "10 - 11am Early Bird"
+    "additionalDetail": "10 - 11am Early Bird",
+    "link": "https://www.instagram.com/p/DZ5agHaNtbm/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
   },
   {
     "name": "Card Yard",
@@ -41,55 +51,5 @@
     "addressLine1": "222 Rowntree Dairy Rd",
     "addressLine2": "Woodbridge, ON L4L 9T2",
     "additionalDetail": "10 - 11am Early Bird"
-  },
-  {
-    "name": "HobbyVerse",
-    "date": "2026-05-30",
-    "showTime": "10am - 5pm",
-    "venueName": "Weplay Centre",
-    "addressLine1": "100 Clegg Road",
-    "addressLine2": "Markham, ON L6G 1E1"
-  },
-  {
-    "name": "Mewtopia",
-    "date": "2026-04-26",
-    "showTime": "10am - 4pm",
-    "venueName": "Embassy Grand Convention Centre",
-    "addressLine1": "8800 The Gore Road",
-    "addressLine2": "Brampton, ON L6P 0B1",
-    "additionalDetail": "10 - 11am Early Bird"
-  },
-  {
-    "name": "NACE",
-    "date": "2026-03-22",
-    "showTime": "11am - 6pm",
-    "venueName": "IKON Event Space",
-    "addressLine1": "6887 Dixie Road",
-    "addressLine2": "Mississauga, ON L5S 0B8"
-  },
-  {
-    "name": "Mewtopia",
-    "date": "2026-03-14",
-    "showTime": "10am - 4pm",
-    "venueName": "Queen's Manor Event Centre",
-    "addressLine1": "2 Auction Lane",
-    "addressLine2": "Brampton, ON L6T 0C4",
-    "additionalDetail": "10 - 11am Early Bird"
-  },
-  {
-    "name": "NACE",
-    "date": "2026-02-28",
-    "showTime": "11am - 6pm",
-    "venueName": "IKON Event Space",
-    "addressLine1": "6887 Dixie Road",
-    "addressLine2": "Mississauga, ON L5S 0B8"
-  },
-  {
-    "name": "CardFesta Pop-up",
-    "date": "2026-01-24",
-    "showTime": "10am - 4pm",
-    "venueName": "Embassy Grand Convention Centre",
-    "addressLine1": "8800 The Gore Road",
-    "addressLine2": "Brampton, ON L6P 0B1"
   }
 ]

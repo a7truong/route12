@@ -6,4 +6,5 @@ export interface VendingScheduleEntry {
   addressLine1: string;
   addressLine2: string;
   additionalDetail: string | null | undefined;
+  link: string | null | undefined;
 }

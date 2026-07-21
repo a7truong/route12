@@ -1,5 +1,5 @@
-import { Button, Badge, Card, Group, SimpleGrid, Text } from "@mantine/core";
-import { ClockIcon } from "@phosphor-icons/react";
+import { ActionIcon, Button, Badge, Card, Flex, Group, Menu, SimpleGrid, Text } from "@mantine/core";
+import { ClockIcon, DotsThreeIcon, LinkSimpleIcon, MapPinIcon } from "@phosphor-icons/react";
 import dayjs from "dayjs";
 import type { VendingScheduleEntry } from "../models/VendingScheduleEntry.ts";
 import "./VendingShowGrid.scss";
@@ -38,34 +38,67 @@ export default function VendingShowGrid({ shows }: VendingShowGridProps) {
           dayDiffLabel = "Tomorrow";
         }
 
+        const isCurrentOrFutureShow = dayDiff >= 0;
+
         return (
           <Card radius="md" key={v.date} className="vending-schedule-card">
-            <Group justify={dayDiff >= 0 ? "space-between" : "center"}>
+            <Group justify={isCurrentOrFutureShow ? "space-between" : "center"}>
               <Badge className="badge">{showDate.format("MMM D YYYY")}</Badge>
-              {dayDiff >= 0 && <Badge className="badge">{dayDiffLabel}</Badge>}
+              {isCurrentOrFutureShow && <Badge className="badge">{dayDiffLabel}</Badge>}
             </Group>
-            <Text fz="xl" fw={600} mt="md">
-              {v.name}
-            </Text>
-            <Text fz="md" mt={5} className="text-with-icon">
-              <ClockIcon className="icon" />
-              {v.showTime}
-            </Text>
-            <Text fz="md" mt={20}>
-              <Button variant="subtle" onClick={() => window.open(getGoogleMapLink(v), "_blank")}>
-                {v.venueName}
-              </Button>
-            </Text>
-            <Text fz="sm" c="dimmed" mt={10}>
-              {v.addressLine1}
-            </Text>
-            <Text fz="sm" c="dimmed">
-              {v.addressLine2}
-            </Text>
-            {v.additionalDetail && (
-              <Text fz="sm" c="dimmed" mt={10}>
-                {v.additionalDetail}
+            <Card.Section className="body">
+              <Text fz="xl" fw={600} mt="md">
+                {v.name}
               </Text>
+              <Text fz="md" mt={5} className="text-with-icon">
+                <ClockIcon className="icon" />
+                {v.showTime}
+              </Text>
+              <Text fz="md" mt={20}>
+                <Button variant="subtle" onClick={() => window.open(getGoogleMapLink(v), "_blank")}>
+                  {v.venueName}
+                </Button>
+              </Text>
+              <Text fz="sm" c="dimmed" mt={10}>
+                {v.addressLine1}
+              </Text>
+              <Text fz="sm" c="dimmed">
+                {v.addressLine2}
+              </Text>
+              {v.additionalDetail && (
+                <Text fz="sm" c="dimmed" mt={10}>
+                  {v.additionalDetail}
+                </Text>
+              )}
+            </Card.Section>
+            {isCurrentOrFutureShow && (
+              <Card.Section className="footer">
+                <Group>
+                  <Flex mr={12} mt={12} mb={5}>
+                    <Menu withinPortal position="bottom-end" shadow="sm">
+                      <Menu.Target>
+                        <ActionIcon variant="subtle" color="gray">
+                          <DotsThreeIcon weight="bold" />
+                        </ActionIcon>
+                      </Menu.Target>
+
+                      <Menu.Dropdown>
+                        <Menu.Item
+                          leftSection={<MapPinIcon />}
+                          onClick={() => window.open(getGoogleMapLink(v), "_blank")}
+                        >
+                          Google Maps
+                        </Menu.Item>
+                        {v.link && (
+                          <Menu.Item leftSection={<LinkSimpleIcon />} onClick={() => window.open(v.link!, "_blank")}>
+                            Event Info
+                          </Menu.Item>
+                        )}
+                      </Menu.Dropdown>
+                    </Menu>
+                  </Flex>
+                </Group>
+              </Card.Section>
             )}
           </Card>
         );
